@@ -57,6 +57,9 @@ The project follows this workflow:
  
 ![Image](https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/pin-out.png)
 
+### **Deployment**
+![image](https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/2.jpg)
+
 ---
 
 ## **🚀 How to Run the Project**  
