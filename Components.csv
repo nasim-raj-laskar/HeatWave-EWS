@@ -1,0 +1,5 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet"
+"BZ1","1","Buzzer","","","","","~"
+"U1","1","ESP-WROOM-32","","","","ESP-WROOM-32:MODULE_ESP-WROOM-32",""
+"U2","1","DM-OLED096-636","","","","DM-OLED096-636:MODULE_DM-OLED096-636",""
+"U3","1","DHT11","","","","Sensor:Aosong_DHT11_5.5x12.0_P2.54mm","http://akizukidenshi.com/download/ds/aosong/DHT11.pdf"
