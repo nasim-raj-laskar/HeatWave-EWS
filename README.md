@@ -53,12 +53,13 @@ The project follows this workflow:
 | **Breadboard & Jumper Wires** | For circuit connections | 
 | **Buzzer** | For triggering alarm |
 
-### **🔌 Circuit Diagram**  
- 
-![Image](https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/pin-out.png)
+### 🔌 Circuit Diagram & Deployment  
 
-### **Deployment**
-![image](https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/2.jpg)
+<div align="center">
+  <img src="https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/pin-out.png" alt="Circuit Diagram" width="45%">
+  <img src="https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/3333.jpg" alt="Deployment" width="45%">
+</div>
+
 
 ---
 
