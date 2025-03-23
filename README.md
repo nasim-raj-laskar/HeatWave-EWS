@@ -1,10 +1,7 @@
-Here's a **detailed README** for your project, covering all essential sections in a structured and professional way.  
 
----
+# Heatwave Detection using ML on ESP32  
 
-## **README: Real-time Heatwave Detection using ML on ESP32**  
-
-### **📌 Project Overview**  
+## **📌 Project Overview**  
 This project implements a real-time **heatwave detection system** by combining **machine learning** with **IoT**. The system uses an **ESP32 microcontroller** connected to a **DHT11 sensor** to monitor temperature and humidity in real-time. A **decision tree model** trained on a **synthetic dataset** is used to classify whether a heatwave is occurring. The model's logic is extracted into **if-else rules** and embedded into the ESP32, allowing it to function without the need for heavy ML computations.  
 
 📌 **Key Features:**  
@@ -53,7 +50,8 @@ The project follows this workflow:
 | **ESP32** | Microcontroller used for processing and display |  
 | **DHT11 Sensor** | Measures temperature and humidity |  
 | **OLED Display (SSD1306)** | Displays real-time heatwave detection results |  
-| **Breadboard & Jumper Wires** | For circuit connections |  
+| **Breadboard & Jumper Wires** | For circuit connections | 
+| **Buzzer** | For triggering alarm |
 
 ### **🔌 Circuit Diagram**  
 📌 *Insert an image of your circuit diagram here*  
