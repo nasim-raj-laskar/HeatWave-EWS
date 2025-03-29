@@ -49,7 +49,7 @@ function updateChart(temperature, humidity) {
 }
 
 function updateData() {
-    fetch("http://192.168.1.100/data")  // Replace with ESP32 IP
+    fetch("http://192.168.0.129/data")  // ESP32 IP
         .then(response => response.json())
         .then(data => {
             document.getElementById("temp").innerText = data.temperature;
