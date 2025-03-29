@@ -56,8 +56,8 @@ The project follows this workflow:
 ### 🔌 Circuit Diagram & Deployment  
 
 <div align="center">
-  <img src="https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/pin-out.png" alt="Circuit Diagram" width="45%">
-  <img src="https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/3333.jpg" alt="Deployment" width="45%">
+  <img src="https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/pin-out.png" alt="Circuit Diagram" width="50%">
+  <img src="https://github.com/nasim-raj-laskar/HeatWave-EWS/blob/main/img/1.jpg" alt="Deployment" width="42%">
 </div>
 
 
@@ -77,7 +77,7 @@ The project follows this workflow:
    ```
 3. Run the Python script to train the model:  
    ```bash
-   python train_model.py
+   python Model.ipynb
    ```
 
 ### **📌 Uploading Code to ESP32**  
@@ -87,9 +87,4 @@ The project follows this workflow:
 4. Open the `Heatwave.ino` file in Arduino IDE and upload it.  
 ---
 
-## **📌 Future Improvements**  
-✔️ Use **real-world climate data** instead of synthetic data  
-✔️ Add a **buzzer alert system** for warnings  
-✔️ Implement **cloud connectivity** for remote monitoring  
-✔️ Extend project to detect **other extreme weather conditions** (floods, droughts)  
 
