@@ -55,6 +55,7 @@ function updateData() {
             document.getElementById("temp").innerText = data.temperature;
             document.getElementById("hum").innerText = data.humidity;
 
+
             let statusElement = document.getElementById("prediction");
             let warningBox = document.getElementById("warning-box");
 
