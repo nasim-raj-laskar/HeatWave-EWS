@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatwave Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff7e5f">
+
+</head>
+
+<body>
+    <button id="installApp"
+        style="padding: 10px; background: #ff5733; color: white; border: none; cursor: pointer; display: none;">
+          Install Heatwave Monitor App
+    </button>
+
+    <div class="container">
+        <h1>🌡️ Heatwave Monitor</h1>
+        <p>Temperature: <span id="temp">--</span>°C</p>
+        <p>Humidity: <span id="hum">--</span>%</p>
+        <p>Status: <span id="prediction">Loading...</span></p>
+
+        <div id="warning-box" class="warning">🔥 Heatwave Warning!</div>
+        <canvas id="tempChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
