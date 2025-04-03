@@ -49,7 +49,7 @@ function updateChart(temperature, humidity) {
 }
 
 function updateData() {
-    fetch("http://192.168.0.104:8000/data")  // server IP
+    fetch("http://192.168.0.104:8000/data/")  // server IP
         .then(response => response.json())
         .then(data => {
             document.getElementById("temp").innerText = data.temperature;
