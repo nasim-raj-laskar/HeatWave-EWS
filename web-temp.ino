@@ -3,13 +3,11 @@
 #include <DHT.h>
 
 // WiFi Credentials
-const char* ssid = "ngUsAmo";       // Your WiFi SSID
-const char* password = "67000470";  // Your WiFi Password
+const char* ssid = "yourwifiname";       // Your WiFi SSID
+const char* password = "yourwifipassword";  
+const char* serverName = "http://Nasim74.pythonanywhere.com/api/post-data/";    //hosted at pythonanyhwere
 
-// Django Server URL (Use HTTP if using a free PythonAnywhere account)
-const char* serverName = "http://Nasim74.pythonanywhere.com/api/post-data/";
 
-// DHT Sensor Setup
 #define DHTPIN 4      // GPIO pin where DHT11 is connected
 #define DHTTYPE DHT11 // Using DHT11 sensor
 DHT dht(DHTPIN, DHTTYPE);
@@ -43,20 +41,19 @@ void loop() {
     http.begin(serverName);
     http.addHeader("Content-Type", "application/json");
 
-    // Read sensor data
+    
     float temperature = dht.readTemperature();
     float humidity = dht.readHumidity();
 
-    // Validate readings
+    
     if (isnan(temperature) || isnan(humidity)) {
         Serial.println("Failed to read from DHT sensor!");
         return;
     }
-
-    // Heatwave condition: Humidity > 59.5% and Temperature > 29.7°C
+    //logic
     int prediction = (humidity > 59.5 && temperature > 29.7) ? 1 : 0;
 
-    // Create JSON payload
+    //JSON payload
     String jsonPayload = "{";
     jsonPayload += "\"temperature\":" + String(temperature) + ",";
     jsonPayload += "\"humidity\":" + String(humidity) + ",";
@@ -66,7 +63,7 @@ void loop() {
     Serial.print("Sending JSON: ");
     Serial.println(jsonPayload);
 
-    // Send POST request
+    //POST request
     int httpResponseCode = http.POST(jsonPayload);
 
     if (httpResponseCode > 0) {
@@ -77,7 +74,7 @@ void loop() {
         Serial.println(httpResponseCode);
     }
 
-    http.end(); // Close connection
+    http.end(); 
 
     delay(5000);  // Send data every 5 seconds
 }
