@@ -2,7 +2,7 @@ let tempData = [];
 let humData = [];
 let labels = [];
 
-//chart
+// Chart.js configuration
 const ctx = document.getElementById("tempChart").getContext("2d");
 const tempChart = new Chart(ctx, {
     type: "line",
@@ -48,13 +48,15 @@ function updateChart(temperature, humidity) {
     tempChart.update();
 }
 
+// url
+const API_URL = "https://Nasim74.pythonanywhere.com/api/latest-data/";
+
 function updateData() {
-    fetch("http://192.168.0.104:8000/api/latest-data/")  // server IP
+    fetch(API_URL)  
         .then(response => response.json())
         .then(data => {
-            document.getElementById("temp").innerText = data.temperature;
-            document.getElementById("hum").innerText = data.humidity;
-
+            document.getElementById("temp").innerText = data.temperature + "°C";
+            document.getElementById("hum").innerText = data.humidity + "%";
 
             let statusElement = document.getElementById("prediction");
             let warningBox = document.getElementById("warning-box");
@@ -77,6 +79,7 @@ function updateData() {
 setInterval(updateData, 5000);
 updateData();
 
+// Service Worker Registration
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker
         .register("service-worker.js")
@@ -84,9 +87,8 @@ if ("serviceWorker" in navigator) {
         .catch((error) => console.log("Service Worker Registration Failed:", error));
 }
 
-//PWA Button
+// PWA Installation Button
 let deferredPrompt;
-
 window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault();
     deferredPrompt = event;
