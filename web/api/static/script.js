@@ -2,7 +2,7 @@ let tempData = [];
 let humData = [];
 let labels = [];
 
-//chart
+// Chart Setup
 const ctx = document.getElementById("tempChart").getContext("2d");
 const tempChart = new Chart(ctx, {
     type: "line",
@@ -49,12 +49,11 @@ function updateChart(temperature, humidity) {
 }
 
 function updateData() {
-    fetch("http://192.168.0.129/data")  // ESP32 IP
+    fetch("/api/latest-data/")  // Django API endpoint
         .then(response => response.json())
         .then(data => {
             document.getElementById("temp").innerText = data.temperature;
             document.getElementById("hum").innerText = data.humidity;
-
 
             let statusElement = document.getElementById("prediction");
             let warningBox = document.getElementById("warning-box");
@@ -76,29 +75,3 @@ function updateData() {
 
 setInterval(updateData, 5000);
 updateData();
-
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-        .register("service-worker.js")
-        .then(() => console.log("Service Worker Registered"))
-        .catch((error) => console.log("Service Worker Registration Failed:", error));
-}
-
-//PWA Button
-let deferredPrompt;
-
-window.addEventListener("beforeinstallprompt", (event) => {
-    event.preventDefault();
-    deferredPrompt = event;
-    document.getElementById("installApp").style.display = "block";
-
-    document.getElementById("installApp").addEventListener("click", () => {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === "accepted") {
-                console.log("User installed the PWA");
-            }
-            deferredPrompt = null;
-        });
-    });
-});

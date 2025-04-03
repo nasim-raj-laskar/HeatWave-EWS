@@ -5,18 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heatwave Monitor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/static/manifest.json">
     <meta name="theme-color" content="#ff7e5f">
-
 </head>
 
 <body>
-    <button id="installApp"
-        style="padding: 10px; background: #ff5733; color: white; border: none; cursor: pointer; display: none;">
-          Install Heatwave Monitor App
-    </button>
+    <button id="installApp" class="install-btn">Install Heatwave Monitor App</button>
 
     <div class="container">
         <h1>🌡️ Heatwave Monitor</h1>
@@ -28,7 +24,7 @@
         <canvas id="tempChart"></canvas>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/static/script.js"></script>
 </body>
 
 </html>
