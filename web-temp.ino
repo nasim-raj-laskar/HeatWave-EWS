@@ -8,8 +8,8 @@ const char* password = "yourwifipassword";
 const char* serverName = "http://Nasim74.pythonanywhere.com/api/post-data/";    //hosted at pythonanyhwere
 
 
-#define DHTPIN 4      // GPIO pin where DHT11 is connected
-#define DHTTYPE DHT11 // Using DHT11 sensor
+#define DHTPIN 4      // GPIO DHT11
+#define DHTTYPE DHT11 
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
