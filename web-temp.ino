@@ -16,7 +16,7 @@ void setup() {
     Serial.begin(115200);
     WiFi.begin(ssid, password);
 
-    // Connect to WiFi
+    
     Serial.print("Connecting to WiFi...");
     while (WiFi.status() != WL_CONNECTED) {
         delay(1000);
@@ -53,7 +53,7 @@ void loop() {
     //logic
     int prediction = (humidity > 59.5 && temperature > 29.7) ? 1 : 0;
 
-    //JSON payload
+    //JSON
     String jsonPayload = "{";
     jsonPayload += "\"temperature\":" + String(temperature) + ",";
     jsonPayload += "\"humidity\":" + String(humidity) + ",";
